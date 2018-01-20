@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  namespace :rest do
-    get 'sessions/verify'
+
+  namespace :rest, defaults: {format: 'json'} do
+    post 'verify/:email', to: 'sessions#verify',
+      :constraints  => {
+        :email => /[0-z\.]+/ #allows email addresses to contain dots in url
+      }
   end
 
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
