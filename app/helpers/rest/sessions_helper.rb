@@ -1,0 +1,2 @@
+module Rest::SessionsHelper
+end
