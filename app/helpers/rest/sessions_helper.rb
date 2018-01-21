@@ -23,6 +23,6 @@ module Rest::SessionsHelper
         return {status: 401, message: "No Autorizado"}
       end
 
-      return {status: 200, message: "Ok"}
+      return {status: 200, message: "OK"}
     end
 end
