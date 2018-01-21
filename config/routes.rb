@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   namespace :rest, defaults: {format: 'json'} do
     post 'verify/:email', to: 'sessions#verify',
       :constraints  => {

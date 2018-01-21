@@ -7,8 +7,9 @@ class Rest::SessionsController < ActionController::API
 
     validation_response = verify_session(email, image)
 
-    render json: { status: validation_response[:status],
-      message: validation_response[:message]
-    }.to_json
+    render status: validation_response[:status],
+      json: {
+        message: validation_response[:message]
+      }.to_json
   end
 end
