@@ -1,0 +1,2 @@
+class AuthenticationNotifierMailer < ApplicationMailer
+end
