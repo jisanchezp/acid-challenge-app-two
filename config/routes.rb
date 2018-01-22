@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root'users#index'
-  resources :users
+  resources :users, only: [:index, :new, :create, :edit, :update, :destroy]
 
   namespace :rest, defaults: {format: 'json'} do
     post 'verify/:email', to: 'sessions#verify',
