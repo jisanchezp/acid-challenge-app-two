@@ -17,8 +17,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image, id: :user_image %>
+    <%= form.label :image_file %>
+    <%= form.file_field :image_file, id: :user_image_file, multiple: false,
+     accept:'image/png', class: 'form-control' %>
+     <%= form.hidden_field :image, :value => "stub" %>
   </div>
 
   <div class="actions">
