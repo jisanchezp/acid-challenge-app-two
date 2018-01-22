@@ -16,6 +16,11 @@
       <%= form.label :email %>
       <%= form.text_field :email, id: :user_email %>
     </div>
+  <% else %>
+    <div class="field">
+      <p> Imagen actual: </p>
+      <%= image_tag "data:image/png;base64,#{@user.image}", :class => "resize" %>
+    </div>
   <% end %>
 
   <div class="field">
