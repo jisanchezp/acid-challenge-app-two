@@ -11,16 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :user_email %>
-  </div>
+  <% if @user.new_record? %>
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, id: :user_email %>
+    </div>
+  <% else %>
+    <div class="field">
+      <p> Imagen actual: </p>
+      <%= image_tag "data:image/png;base64,#{@user.image}", :class => "resize" %>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :image_file %>
     <%= form.file_field :image_file, id: :user_image_file, multiple: false,
      accept:'image/png', class: 'form-control' %>
-     <%= form.hidden_field :image, :value => "stub" %>
+     <%= form.hidden_field :image, :value => "place_holder" %>
   </div>
 
   <div class="actions">
