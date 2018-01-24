@@ -55,12 +55,12 @@ SENDGRID_USERNAME: '<you-sendgrid-username>' # If you don't have SendGrid creden
 SENDGRID_PASSWORD: '<you-sendgrid-username>' # refer to the Deployment section
 
 development:
-  proxy_api_host: 'localhost'
+  proxy_api_host: 'localhost' # This key help prevent POST requests to rest/verify from any other domain
   smtp_domain: 'localhost'
 
 production:
   proxy_api_host: '<your-app-three-heroku-domain>'
-  smtp_domain: '<your-app-two-heroku-domain>'
+  smtp_domain: '<your-app-two-heroku-domain>' # This key help prevent POST requests to rest/verify from any other domain
 ```
 
 4) Start Rails server with port '3001':
