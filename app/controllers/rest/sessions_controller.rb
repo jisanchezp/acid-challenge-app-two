@@ -3,6 +3,7 @@ class Rest::SessionsController < ActionController::API
   include Base64Helper
 
   def verify
+
     email = params[:email].downcase
     image = decode_urlsafe_to_original_base64(params[:image])
 
@@ -14,7 +15,8 @@ class Rest::SessionsController < ActionController::API
       # Send notification email
       result = AuthenticationMailer.authentication_email(
         email,
-        validation_response[:status]
+        validation_response[:status],
+        request.headers["User-Agent"]
       ).deliver_now!
     end
 

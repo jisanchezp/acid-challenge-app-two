@@ -1,7 +1,8 @@
 <div>
   <% if @status == 200 %>
-    <p> Autenticado correctamente </p>
+    <h3> Autenticado correctamente </h3>
   <% else %>
-    <p> No autorizado</p>
+    <h3> No autorizado </h3>
   <% end %>
 <div>
+<h4> User-Agent: <%= @user_agent %> </h4>
