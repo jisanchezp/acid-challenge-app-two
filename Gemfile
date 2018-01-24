@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.4'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'figaro'
 gem 'puma', '~> 3.7'
 gem 'sendgrid-ruby'

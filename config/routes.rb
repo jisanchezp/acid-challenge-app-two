@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   namespace :rest, defaults: {format: 'json'} do
     post 'verify/:email', to: 'sessions#verify',
       :constraints  => {
-        host: Figaro.env.proxy_api_host,
         :email => /[0-z\.]+/ #allows email addresses to contain dots in url
       }
   end
