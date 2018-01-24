@@ -1,4 +1,4 @@
-# Acid Challenge App Two
+# Acid Challenge App Three
 
 This application is the server side from a whole (basic) system. The complete
 system has a client/server architecture, interconnected by a REST proxy API.
