@@ -55,12 +55,12 @@ SENDGRID_USERNAME: '<you-sendgrid-username>' # If you don't have SendGrid creden
 SENDGRID_PASSWORD: '<you-sendgrid-username>' # refer to the Deployment section
 
 development:
+  proxy_api_host: 'localhost'
   smtp_domain: 'localhost'
 
 production:
+  proxy_api_host: '<your-app-three-heroku-domain>'
   smtp_domain: '<your-app-two-heroku-domain>'
-
-
 ```
 
 4) Start Rails server with port '3001':
@@ -99,7 +99,7 @@ After executing the chosen command, the test results will be displayed in the co
 
 ## Deployment
 
-A live version of these app has already been deployed at [heroku](https://login-form-jisanchez.herokuapp.com/)
+A live version of these app has already been deployed at [acid-challenge-jisanchez.herokuapp.com/](acid-challenge-jisanchez.herokuapp.com/)
 
 If you want to deploy in your own account, follow this steps:
 
@@ -176,6 +176,12 @@ $ figaro heroku:set -e production
 ```
 $ heroku open
 ```
+
+## User management
+
+First you should enter to your localhost, or production deployed site for **Acid Challenge App Two** (There's already a live application available at Heroku for manual testing purposes [acid-challenge-jisanchez.herokuapp.com/](acid-challenge-jisanchez.herokuapp.com/))
+
+The created users list is shown, after that, user management is straightforward.
 
 ## Authors
 
