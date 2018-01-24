@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.4'
+gem 'figaro'
 gem 'puma', '~> 3.7'
 gem 'sendgrid-ruby'
 gem 'sass-rails', '~> 5.0'
