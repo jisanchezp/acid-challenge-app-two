@@ -4,7 +4,6 @@ require 'faker'
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user_one = users(:one)
-    @user_two = users(:two)
     @uploaded_file =  Rack::Test::UploadedFile.new (Rails.root.join("test/files/test.png")), 'image/png'
   end
 

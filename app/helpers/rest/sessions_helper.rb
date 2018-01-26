@@ -4,7 +4,6 @@ module Rest::SessionsHelper
   def verify_session(email, image)
 
     user = User.find_by_email(email)
-
     unless user.nil?
       if user.image == image
         return response_hash(false)
