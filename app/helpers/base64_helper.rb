@@ -10,7 +10,6 @@ module Base64Helper
 
   # Decodes url safe base64 string and encodes it to the original base64 string
   def decode_urlsafe_to_original_base64(urlsafe_enconded_string)
-    puts 'aja´---> ' + Base64.encode64(Base64.urlsafe_decode64(urlsafe_enconded_string)) + ''
     Base64.encode64(Base64.urlsafe_decode64(urlsafe_enconded_string))
   end
 end

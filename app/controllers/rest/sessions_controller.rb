@@ -11,7 +11,7 @@ class Rest::SessionsController < ActionController::API
 
 
     if validation_response[:exists]
-      puts "email: #{email} status: #{validation_response[:status]} user-agent: #{request.headers["User-Agent"]}"
+
       # Send notification email
       result = AuthenticationMailer.authentication_email(
         email,
