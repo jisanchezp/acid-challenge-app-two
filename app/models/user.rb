@@ -9,5 +9,4 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :image, presence: true
 
-
 end

@@ -9,7 +9,6 @@ class Rest::SessionsController < ActionController::API
     # Verify session and return response status and message
     validation_response = verify_session(email, image)
 
-
     if validation_response[:exists]
 
       # Send notification email
