@@ -23,8 +23,6 @@ class UsersController < ApplicationController
     else
       render :new, notice: "File was empty."
     end
-
-
   end
 
   def update
