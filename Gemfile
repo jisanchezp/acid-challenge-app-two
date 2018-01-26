@@ -14,12 +14,17 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+end
+
+group :test do
+  gem 'rails-controller-testing'
 end
 
 group :production do

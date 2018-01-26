@@ -3,7 +3,6 @@ class Rest::SessionsController < ActionController::API
   include Base64Helper
 
   def verify
-
     email = params[:email].downcase
     image = decode_urlsafe_to_original_base64(params[:image])
 

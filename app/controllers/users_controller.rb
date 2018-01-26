@@ -13,12 +13,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to users_url, notice: 'User was successfully created.'
+    if user_params[:image_file] != nil
+      @user = User.new(user_params)
+      if @user.save
+        redirect_to users_url, notice: 'User was successfully created.'
+      else
+        render :new
+      end
     else
-      render :new
+      render :new, notice: "File was empty."
     end
+
+
   end
 
   def update

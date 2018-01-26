@@ -79,7 +79,13 @@ To run automated tests follow the following steps:
 
 Pre-requisites: You should have followed the "Installing" steps for all three applications first.
 
-1) Step into the main folder and run a command console, and type:
+1) Step into the main folder and run a command console, and run migrations with the following command:
+
+```
+rails db:migrate RAILS_ENV=test
+```
+
+2) Enter the command below to run all tests:
 
 ```
 $ rails t
