@@ -4,7 +4,7 @@ class Rest::SessionsController < ActionController::API
 
   def verify
     email = params[:email].downcase
-    image = decode_urlsafe_to_original_base64(JSON.parse(params[:image]))
+    image = decode_urlsafe_to_original_base64(params[:image])
 
     # Verify session and return response status and message
     validation_response = verify_session(email, image)

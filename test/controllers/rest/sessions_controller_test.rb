@@ -15,8 +15,8 @@ class Rest::SessionsControllerTest < ActionDispatch::IntegrationTest
                         }
     @uploaded_file_one =  Rack::Test::UploadedFile.new (Rails.root.join("test/files/test.png")), 'image/png'
     @uploaded_file_two =  Rack::Test::UploadedFile.new (Rails.root.join("test/files/test2.png")), 'image/png'
-    @request_body_one = { image: "#{Base64.urlsafe_encode64(File.open(@uploaded_file_one.tempfile, "rb").read).to_json}" }.to_json
-    @request_body_two = { image: "#{Base64.urlsafe_encode64(File.open(@uploaded_file_two.tempfile, "rb").read).to_json}" }.to_json
+    @request_body_one = { image: "#{Base64.urlsafe_encode64(File.open(@uploaded_file_one.tempfile, "rb").read) }" }.to_json
+    @request_body_two = { image: "#{Base64.urlsafe_encode64(File.open(@uploaded_file_two.tempfile, "rb").read) }" }.to_json
     @authorized_response_body = { message: "OK" }.to_json
     @unauthorized_response_body = { message: "No Autorizado" }.to_json
   end

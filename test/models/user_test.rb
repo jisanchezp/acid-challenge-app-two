@@ -47,6 +47,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
 
+  test "image should be present" do
+    @user.email = "   "
+    assert_not @user.valid?
+  end
+
   test "image should be base64 string of image_file" do
     assert_equal "place_holder", @user.image
     @user.save
